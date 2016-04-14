@@ -2,7 +2,7 @@ defmodule Ectophile do
 
   defmacro __using__(_) do
     quote do
-      import unquote(__MODULE__), only: [attachment_fields: 1]
+      import unquote(__MODULE__), only: [attachment_fields: 2]
       @before_compile Ectophile
 
       Module.register_attribute(__MODULE__, :ectophile_data, accumulate: true)
